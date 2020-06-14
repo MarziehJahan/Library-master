@@ -159,13 +159,20 @@ namespace Library.Repositories
         }
         public long EvalAllFinesForUser(Guid memberId)
         {
-            List<Borrowed> borroweds = GetBorrowedsByMemberId(memberId);
-            long AllFines = 0;
-            foreach (var item in borroweds)
+            try
             {
-                AllFines += item.fines;
+                List<Borrowed> borroweds = GetBorrowedsByMemberId(memberId);
+                long AllFines = 0;
+                foreach (var item in borroweds)
+                {
+                    AllFines += item.fines;
+                }
+                return AllFines;
             }
-            return AllFines;
+            catch (Exception)
+            {
+                return 0;
+            }
         }
     }
 }

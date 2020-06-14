@@ -555,5 +555,26 @@ namespace Library
             }
             
         }
+
+        private void btnAllfines_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtNationalCode.Text == "")
+                {
+                    MessageBox.Show("لطفا کد ملی کاربر را وارد نمایید", "خطا");
+                }
+                else
+                {
+                    var user = membersRepo.FindUserByNationalCode(txtNationalCode.Text);
+                    long fines = borrowedRepo.EvalAllFinesForUser(user.MemberId);
+                    MessageBox.Show("مبلغ کل = " + fines, "نمایش کل جریمه های کاربر");
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+        }
     }
 }

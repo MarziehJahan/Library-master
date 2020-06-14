@@ -59,6 +59,7 @@ namespace Library
             this.txtNationalCode = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnEditbook = new System.Windows.Forms.Button();
+            this.btnAllfines = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridStorageOfBooks)).BeginInit();
             this.SuspendLayout();
@@ -363,11 +364,23 @@ namespace Library
             this.btnEditbook.UseVisualStyleBackColor = true;
             this.btnEditbook.Click += new System.EventHandler(this.btnEditbook_Click);
             // 
+            // btnAllfines
+            // 
+            this.btnAllfines.Font = new System.Drawing.Font("B Nazanin", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnAllfines.Location = new System.Drawing.Point(234, 337);
+            this.btnAllfines.Name = "btnAllfines";
+            this.btnAllfines.Size = new System.Drawing.Size(106, 29);
+            this.btnAllfines.TabIndex = 26;
+            this.btnAllfines.Text = "نمایش کل جریمه ها";
+            this.btnAllfines.UseVisualStyleBackColor = true;
+            this.btnAllfines.Click += new System.EventHandler(this.btnAllfines_Click);
+            // 
             // StorageOfBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 536);
+            this.Controls.Add(this.btnAllfines);
             this.Controls.Add(this.btnEditbook);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNationalCode);
@@ -427,5 +440,6 @@ namespace Library
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ToolStripMenuItem Fines;
         private System.Windows.Forms.Button btnEditbook;
+        private System.Windows.Forms.Button btnAllfines;
     }
 }
